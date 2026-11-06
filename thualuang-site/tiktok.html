@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>เชื่อม TikTok - ถั่วเหลือง</title>
+<style>body{font-family:system-ui,sans-serif;max-width:640px;margin:40px auto;padding:0 16px;line-height:1.7;color:#222;background:#fffbea}</style></head>
+<body>
+<h1>กำลังเชื่อม TikTok…</h1>
+<p id="m">กำลังส่งต่อไปยังโปรแกรมบนเครื่อง</p>
+<script>
+// TikTok only redirects to https pages; hand the one-time code to the helper waiting on this computer (bin/tiktok_auth.py)
+var q = location.search;
+if (q.indexOf('code=') >= 0) { location.replace('http://localhost:8766/' + q); }
+else { document.getElementById('m').textContent = 'ไม่พบรหัสจาก TikTok'; }
+</script>
+</body></html>
